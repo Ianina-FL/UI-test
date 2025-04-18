@@ -24,7 +24,7 @@ import PricingSection from '../../components/WebPageComponents/PricingComponent'
 export default function WebSite() {
   const cardsStyle = useAppSelector((state) => state.style.cardsStyle);
   const bgColor = useAppSelector((state) => state.style.bgLayoutColor);
-  const projectName = 'UI test';
+  const projectName = 'UI test 1';
 
   useEffect(() => {
     const darkElement = document.querySelector('body .dark');
@@ -146,10 +146,10 @@ export default function WebSite() {
           content={`Explore the range of services offered by our event management app. From venue selection to budget management, discover how we can make your event planning seamless and efficient.`}
         />
       </Head>
-      <WebSiteHeader projectName={'UI test'} pages={pages} />
+      <WebSiteHeader projectName={'UI test 1'} pages={pages} />
       <main className={`flex-grow    bg-white  rounded-none  `}>
         <HeroSection
-          projectName={'UI test'}
+          projectName={'UI test 1'}
           image={['Event planning tools and services']}
           mainText={`Transform Your Events with ${projectName}`}
           subTitle={`Discover the comprehensive services offered by ${projectName} to streamline your event planning. From venue selection to budget management, we provide everything you need for a successful event.`}
@@ -158,7 +158,7 @@ export default function WebSite() {
         />
 
         <FeaturesSection
-          projectName={'UI test'}
+          projectName={'UI test 1'}
           image={['Event management service features']}
           withBg={1}
           features={features_points}
@@ -168,21 +168,21 @@ export default function WebSite() {
         />
 
         <PricingSection
-          projectName={'UI test'}
-          withBg={0}
+          projectName={'UI test 1'}
+          withBg={1}
           features={pricing_features}
           description={description}
         />
 
         <ContactFormSection
-          projectName={'UI test'}
+          projectName={'UI test 1'}
           design={ContactFormDesigns.HIGHLIGHTED || ''}
           image={['Contact form with email icon']}
           mainText={`Connect with ${projectName} Today `}
           subTitle={`Have questions or need assistance? Reach out to us anytime, and our team at ${projectName} will respond promptly to your inquiries.`}
         />
       </main>
-      <WebSiteFooter projectName={'UI test'} pages={pages} />
+      <WebSiteFooter projectName={'UI test 1'} pages={pages} />
     </div>
   );
 }

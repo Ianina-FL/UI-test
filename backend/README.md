@@ -1,4 +1,4 @@
-#UI test - template backend,
+#UI test 1 - template backend,
 
 #### Run App on local machine:
 
@@ -38,10 +38,10 @@
 
 - Type this command to creating a new database.
 
-  - `postgres=> CREATE DATABASE db_ui_test;`
+  - `postgres=> CREATE DATABASE db_ui_test_1;`
 
 - Then give that new user privileges to the new database then quit the `psql`.
-  - `postgres=> GRANT ALL PRIVILEGES ON DATABASE db_ui_test TO admin;`
+  - `postgres=> GRANT ALL PRIVILEGES ON DATABASE db_ui_test_1 TO admin;`
   - `postgres=> \q`
 
 ---

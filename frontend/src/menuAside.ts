@@ -33,14 +33,6 @@ const menuAside: MenuAsideItem[] = [
     permissions: 'READ_GUESTS',
   },
   {
-    href: '/schedules/schedules-list',
-    label: 'Schedules',
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    icon: icon.mdiCalendar ? icon.mdiCalendar : icon.mdiTable,
-    permissions: 'READ_SCHEDULES',
-  },
-  {
     href: '/vendors/vendors-list',
     label: 'Vendors',
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment

@@ -5,7 +5,7 @@ import LayoutGuest from '../layouts/Guest';
 import { getPageTitle } from '../config';
 
 export default function PrivacyPolicy() {
-  const title = 'UI test';
+  const title = 'UI test 1';
   const [projectUrl, setProjectUrl] = useState('');
 
   useEffect(() => {
