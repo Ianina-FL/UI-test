@@ -103,3 +103,10 @@
     @apply text-pavitra-800;
   }
 }
+
+
+/* Dark theme styles for widget charts */
+.dark .widget-chart {
+  background-color: #21242A;
+  color: #CBD5E1;
+}

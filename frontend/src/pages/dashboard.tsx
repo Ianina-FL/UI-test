@@ -147,16 +147,7 @@ const Dashboard = () => {
             </div>
           )}
 
-          {rolesWidgets &&
-            rolesWidgets.map((widget) => (
-              <SmartWidget
-                key={widget.id}
-                userId={currentUser?.id}
-                widget={widget}
-                roleId={widgetsRole?.role?.value || ''}
-                admin={hasPermission(currentUser, 'CREATE_ROLES')}
-              />
-            ))}
+          {/* Widgets section removed */}
         </div>
 
         {!!rolesWidgets.length && <hr className='my-6  ' />}
