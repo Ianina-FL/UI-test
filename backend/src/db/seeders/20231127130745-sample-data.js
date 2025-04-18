@@ -43,6 +43,14 @@ const BudgetsData = [
 
     // type code here for "relation_one" field
   },
+
+  {
+    name: 'Fundraiser Budget',
+
+    amount: 25000,
+
+    // type code here for "relation_one" field
+  },
 ];
 
 const GuestsData = [
@@ -53,7 +61,7 @@ const GuestsData = [
 
     is_attending: true,
 
-    meal_preference: 'vegetarian',
+    meal_preference: 'standard',
   },
 
   {
@@ -63,7 +71,7 @@ const GuestsData = [
 
     is_attending: true,
 
-    meal_preference: 'vegetarian',
+    meal_preference: 'standard',
   },
 
   {
@@ -73,7 +81,7 @@ const GuestsData = [
 
     is_attending: true,
 
-    meal_preference: 'standard',
+    meal_preference: 'vegetarian',
   },
 
   {
@@ -82,6 +90,16 @@ const GuestsData = [
     email: 'michael.brown@example.com',
 
     is_attending: true,
+
+    meal_preference: 'standard',
+  },
+
+  {
+    name: 'Sarah Davis',
+
+    email: 'sarah.davis@example.com',
+
+    is_attending: false,
 
     meal_preference: 'vegetarian',
   },
@@ -135,6 +153,18 @@ const SchedulesData = [
 
     // type code here for "relation_many" field
   },
+
+  {
+    title: 'Charity Fundraiser',
+
+    start_time: new Date('2023-08-25T19:00:00Z'),
+
+    end_time: new Date('2023-08-25T23:00:00Z'),
+
+    // type code here for "relation_one" field
+
+    // type code here for "relation_many" field
+  },
 ];
 
 const VendorsData = [
@@ -143,7 +173,7 @@ const VendorsData = [
 
     contact_info: 'info@gourmetcatering.com',
 
-    service_type: 'catering',
+    service_type: 'entertainment',
 
     rating: 4.8,
   },
@@ -153,7 +183,7 @@ const VendorsData = [
 
     contact_info: 'contact@elegantdecor.com',
 
-    service_type: 'decorating',
+    service_type: 'catering',
 
     rating: 4.5,
   },
@@ -163,7 +193,7 @@ const VendorsData = [
 
     contact_info: 'djbeats@musicmail.com',
 
-    service_type: 'decorating',
+    service_type: 'entertainment',
 
     rating: 4.7,
   },
@@ -173,9 +203,19 @@ const VendorsData = [
 
     contact_info: 'flowers@floralarrangements.com',
 
-    service_type: 'decorating',
+    service_type: 'catering',
 
     rating: 4.6,
+  },
+
+  {
+    name: 'Party Planners Ltd.',
+
+    contact_info: 'events@partyplanners.com',
+
+    service_type: 'catering',
+
+    rating: 4.9,
   },
 ];
 
@@ -189,7 +229,7 @@ const VenuesData = [
 
     features: 'Stage, AV Equipment, Catering',
 
-    is_booked: false,
+    is_booked: true,
   },
 
   {
@@ -213,7 +253,7 @@ const VenuesData = [
 
     features: 'Projector, Sound System',
 
-    is_booked: true,
+    is_booked: false,
   },
 
   {
@@ -226,6 +266,18 @@ const VenuesData = [
     features: 'Outdoor, Floral Decor',
 
     is_booked: true,
+  },
+
+  {
+    name: 'Art Gallery',
+
+    location: 'Cultural District',
+
+    capacity: 100,
+
+    features: 'Exhibition Space, Lighting',
+
+    is_booked: false,
   },
 ];
 
@@ -275,6 +327,17 @@ async function associateBudgetWithEvent() {
   if (Budget3?.setEvent) {
     await Budget3.setEvent(relatedEvent3);
   }
+
+  const relatedEvent4 = await Schedules.findOne({
+    offset: Math.floor(Math.random() * (await Schedules.count())),
+  });
+  const Budget4 = await Budgets.findOne({
+    order: [['id', 'ASC']],
+    offset: 4,
+  });
+  if (Budget4?.setEvent) {
+    await Budget4.setEvent(relatedEvent4);
+  }
 }
 
 async function associateScheduleWithVenue() {
@@ -320,6 +383,17 @@ async function associateScheduleWithVenue() {
   });
   if (Schedule3?.setVenue) {
     await Schedule3.setVenue(relatedVenue3);
+  }
+
+  const relatedVenue4 = await Venues.findOne({
+    offset: Math.floor(Math.random() * (await Venues.count())),
+  });
+  const Schedule4 = await Schedules.findOne({
+    order: [['id', 'ASC']],
+    offset: 4,
+  });
+  if (Schedule4?.setVenue) {
+    await Schedule4.setVenue(relatedVenue4);
   }
 }
 

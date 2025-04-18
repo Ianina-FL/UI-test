@@ -20,7 +20,7 @@ export default function WebSiteFooter({
 
   const style = FooterStyle.WITH_PROJECT_NAME;
 
-  const design = FooterDesigns.DESIGN_DIVERSITY;
+  const design = FooterDesigns.DEFAULT_DESIGN;
 
   return (
     <div

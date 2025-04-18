@@ -19,7 +19,7 @@ const menuAside: MenuAsideItem[] = [
   {
     href: '/budgets/budgets-list',
     label: 'Budgets',
-label: 'Budget',
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     icon: icon.mdiCurrencyUsd ? icon.mdiCurrencyUsd : icon.mdiTable,
     permissions: 'READ_BUDGETS',
@@ -31,6 +31,14 @@ label: 'Budget',
     // @ts-ignore
     icon: icon.mdiAccountGroup ? icon.mdiAccountGroup : icon.mdiTable,
     permissions: 'READ_GUESTS',
+  },
+  {
+    href: '/schedules/schedules-list',
+    label: 'Schedules',
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    icon: icon.mdiCalendar ? icon.mdiCalendar : icon.mdiTable,
+    permissions: 'READ_SCHEDULES',
   },
   {
     href: '/vendors/vendors-list',

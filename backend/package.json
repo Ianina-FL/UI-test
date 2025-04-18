@@ -1,6 +1,6 @@
 {
-  "name": "uitest1",
-  "description": "UI test 1 - template backend",
+  "name": "uitest",
+  "description": "UI test - template backend",
   "scripts": {
     "start": "npm run db:migrate && npm run db:seed && npm run watch",
     "db:migrate": "sequelize-cli db:migrate",

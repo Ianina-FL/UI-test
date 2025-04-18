@@ -15,7 +15,7 @@ services:
       - ./data/db:/var/lib/postgresql/data
     environment:
       - POSTGRES_HOST_AUTH_METHOD=trust
-      - POSTGRES_DB=db_ui_test_1
+      - POSTGRES_DB=db_ui_test
     ports:
       - "5432:5432"
   backend:

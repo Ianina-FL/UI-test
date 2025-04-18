@@ -3,7 +3,7 @@ const os = require('os');
 const config = {
   gcloud: {
     bucket: 'fldemo-files',
-    hash: 'afeefb9d49f5b7977577876b99532ac7',
+    hash: '00d74f18e81fa7e5a120d962273bacc3',
   },
   bcrypt: {
     saltRounds: 12,
@@ -36,7 +36,7 @@ const config = {
   },
   uploadDir: os.tmpdir(),
   email: {
-    from: 'UI test 1 <app@flatlogic.app>',
+    from: 'UI test <app@flatlogic.app>',
     host: 'email-smtp.us-east-1.amazonaws.com',
     port: 587,
     auth: {

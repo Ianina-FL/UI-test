@@ -1,5 +1,3 @@
-body { font-family: "Verdana", serif; }
-
 .theme-pink {
   .app-sidebar {
     @apply bg-pavitra-900 text-white;
@@ -104,11 +102,4 @@ body { font-family: "Verdana", serif; }
   .active\:text-blue-700:active {
     @apply text-pavitra-800;
   }
-}
-
-
-/* Dark theme styles for widget charts */
-.dark .widget-chart {
-  background-color: #21242A;
-  color: #CBD5E1;
 }

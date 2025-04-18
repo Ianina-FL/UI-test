@@ -44,7 +44,7 @@ export default function AsideMenuLayer({
         >
           <div className='text-center flex-1 lg:text-left lg:pl-6 xl:text-center xl:pl-0'>
             <Link href={'/home'}>
-              <b className='font-black'>UI test 1</b>
+              <b className='font-black'>UI test</b>
             </Link>
           </div>
           <button

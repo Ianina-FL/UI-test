@@ -83,12 +83,12 @@ const BudgetsTablesPage = () => {
   return (
     <>
       <Head>
-        <title>{getPageTitle('Budget')}</title>
+        <title>{getPageTitle('Budgets')}</title>
       </Head>
       <SectionMain>
         <SectionTitleLineWithButton
           icon={mdiChartTimelineVariant}
-          title='Budget'
+          title='Budgets'
           main
         >
           {''}

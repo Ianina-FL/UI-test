@@ -21,7 +21,7 @@ import FaqSection from '../../components/WebPageComponents/FaqComponent';
 export default function WebSite() {
   const cardsStyle = useAppSelector((state) => state.style.cardsStyle);
   const bgColor = useAppSelector((state) => state.style.bgLayoutColor);
-  const projectName = 'UI test 1';
+  const projectName = 'UI test';
 
   useEffect(() => {
     const darkElement = document.querySelector('body .dark');
@@ -142,10 +142,10 @@ export default function WebSite() {
           content={`Explore the flexible pricing plans offered by ${projectName}. Find the perfect plan that suits your event management needs and budget.`}
         />
       </Head>
-      <WebSiteHeader projectName={'UI test 1'} pages={pages} />
+      <WebSiteHeader projectName={'UI test'} pages={pages} />
       <main className={`flex-grow    bg-white  rounded-none  `}>
         <HeroSection
-          projectName={'UI test 1'}
+          projectName={'UI test'}
           image={['Pricing plans comparison chart']}
           mainText={`Flexible Pricing for ${projectName} Plans`}
           subTitle={`Discover the perfect plan for your event management needs with ${projectName}. Choose from our flexible pricing options to find the best fit for your budget and requirements.`}
@@ -154,20 +154,20 @@ export default function WebSite() {
         />
 
         <PricingSection
-          projectName={'UI test 1'}
-          withBg={1}
+          projectName={'UI test'}
+          withBg={0}
           features={pricing_features}
           description={description}
         />
 
         <FaqSection
-          projectName={'UI test 1'}
+          projectName={'UI test'}
           design={FaqDesigns.TWO_COLUMN || ''}
           faqs={faqs}
           mainText={`Common Questions About ${projectName} Pricing `}
         />
       </main>
-      <WebSiteFooter projectName={'UI test 1'} pages={pages} />
+      <WebSiteFooter projectName={'UI test'} pages={pages} />
     </div>
   );
 }

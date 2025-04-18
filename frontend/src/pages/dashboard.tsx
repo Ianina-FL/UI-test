@@ -147,7 +147,16 @@ const Dashboard = () => {
             </div>
           )}
 
-          {/* Widgets section removed */}
+          {rolesWidgets &&
+            rolesWidgets.map((widget) => (
+              <SmartWidget
+                key={widget.id}
+                userId={currentUser?.id}
+                widget={widget}
+                roleId={widgetsRole?.role?.value || ''}
+                admin={hasPermission(currentUser, 'CREATE_ROLES')}
+              />
+            ))}
         </div>
 
         {!!rolesWidgets.length && <hr className='my-6  ' />}
@@ -198,7 +207,7 @@ const Dashboard = () => {
                 <div className='flex justify-between align-center'>
                   <div>
                     <div className='text-lg leading-tight   text-gray-500 dark:text-gray-400'>
-                      Budget
+                      Budgets
                     </div>
                     <div className='text-3xl leading-tight font-semibold'>
                       {budgets}

@@ -18,7 +18,7 @@ import ContactFormSection from '../../components/WebPageComponents/ContactFormCo
 export default function WebSite() {
   const cardsStyle = useAppSelector((state) => state.style.cardsStyle);
   const bgColor = useAppSelector((state) => state.style.bgLayoutColor);
-  const projectName = 'UI test 1';
+  const projectName = 'UI test';
 
   useEffect(() => {
     const darkElement = document.querySelector('body .dark');
@@ -62,10 +62,10 @@ export default function WebSite() {
           content={`Reach out to ${projectName} for any inquiries or support. Our team is here to assist you with all your event management needs.`}
         />
       </Head>
-      <WebSiteHeader projectName={'UI test 1'} pages={pages} />
+      <WebSiteHeader projectName={'UI test'} pages={pages} />
       <main className={`flex-grow    bg-white  rounded-none  `}>
         <HeroSection
-          projectName={'UI test 1'}
+          projectName={'UI test'}
           image={['Customer support team ready']}
           mainText={`Connect with ${projectName} Today`}
           subTitle={`We're here to help with any questions or support you need. Reach out to ${projectName} and let us assist you in making your event a success.`}
@@ -74,14 +74,14 @@ export default function WebSite() {
         />
 
         <ContactFormSection
-          projectName={'UI test 1'}
+          projectName={'UI test'}
           design={ContactFormDesigns.SIMPLE_CLEAN || ''}
           image={['Email communication illustration']}
           mainText={`Reach Out to ${projectName} `}
           subTitle={`Have questions or need support? Contact us anytime, and our team at ${projectName} will respond promptly to assist you.`}
         />
       </main>
-      <WebSiteFooter projectName={'UI test 1'} pages={pages} />
+      <WebSiteFooter projectName={'UI test'} pages={pages} />
     </div>
   );
 }
