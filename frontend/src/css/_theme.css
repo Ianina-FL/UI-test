@@ -1,3 +1,5 @@
+body { font-family: "Verdana", serif; }
+
 .theme-pink {
   .app-sidebar {
     @apply bg-pavitra-900 text-white;
