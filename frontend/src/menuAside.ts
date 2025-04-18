@@ -19,7 +19,7 @@ const menuAside: MenuAsideItem[] = [
   {
     href: '/budgets/budgets-list',
     label: 'Budgets',
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+label: 'Budget',
     // @ts-ignore
     icon: icon.mdiCurrencyUsd ? icon.mdiCurrencyUsd : icon.mdiTable,
     permissions: 'READ_BUDGETS',

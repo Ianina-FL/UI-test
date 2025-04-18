@@ -76,7 +76,7 @@ const EditBudgets = () => {
   return (
     <>
       <Head>
-        <title>{getPageTitle('Edit budgets')}</title>
+        <title>{getPageTitle('Edit budget')}</title>
       </Head>
       <SectionMain>
         <SectionTitleLineWithButton
